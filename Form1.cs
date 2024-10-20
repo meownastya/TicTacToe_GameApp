@@ -134,6 +134,12 @@ namespace TicTacToe_GameApp
             checkDraw();
             winButton = false;
         }
+
+        private void checkRules_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Игроки ходят поочередно.\r\nОдин игрок играет крестиками, другой — ноликами.\r\nИгрок не может сделать ход вне своего хода.\r\n");
+        }
+
         private void checkDraw()
         {
             bool emptyButton = true;

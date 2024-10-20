@@ -62,6 +62,7 @@
             this.checkRules.TabIndex = 2;
             this.checkRules.Text = "Правила игры";
             this.checkRules.UseVisualStyleBackColor = true;
+            this.checkRules.Click += new System.EventHandler(this.checkRules_Click);
             // 
             // Form1
             // 
