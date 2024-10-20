@@ -134,5 +134,35 @@ namespace TicTacToe_GameApp
             checkDraw();
             winButton = false;
         }
+        private void checkDraw()
+        {
+            bool emptyButton = true;
+            if (winButton == false)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                    {
+                        if (buttons[i, j].Text == "")
+                        {
+                            emptyButton = false;
+                            break;
+                        }
+                    }
+                }
+                if (emptyButton == true)
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        for (int j = 0; j < 3; j++)
+                        {
+                            buttons[i, j].Text = "";
+                            buttons[i, j].Enabled = true;
+                        }
+                    }
+                    MessageBox.Show("Победила дружба!");
+                }
+            }
+        }
     }
 }
