@@ -52,6 +52,7 @@
             this.checkRestart.TabIndex = 1;
             this.checkRestart.Text = "Новая игра";
             this.checkRestart.UseVisualStyleBackColor = true;
+            this.checkRestart.Click += new System.EventHandler(this.checkRestart_Click);
             // 
             // checkRules
             // 
