@@ -33,5 +33,19 @@ namespace TicTacToe_GameApp
             }
             setButtons();
         }
+        private void setButtons()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    buttons[i, j].Location = new Point(12 + 206 * j, 12 + 206 * i);
+                    buttons[i, j].Click += checkPlayer_Click;
+                    buttons[i, j].Font = new Font(new FontFamily("Microsoft Sans Serif"), 138);
+                    buttons[i, j].Text = "";
+                    this.Controls.Add(buttons[i, j]);
+                }
+            }
+        }
     }
 }
