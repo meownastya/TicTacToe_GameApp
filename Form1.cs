@@ -65,5 +65,74 @@ namespace TicTacToe_GameApp
             sender.GetType().GetProperty("Enabled").SetValue(sender, false);
             checkWin();
         }
+        private void checkWin()
+        {
+            if (buttons[0, 0].Text == buttons[0, 1].Text && buttons[0, 1].Text == buttons[0, 2].Text)
+            {
+                if (buttons[0, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            if (buttons[1, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[1, 2].Text)
+            {
+                if (buttons[1, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            if (buttons[2, 0].Text == buttons[2, 1].Text && buttons[2, 1].Text == buttons[2, 2].Text)
+            {
+                if (buttons[2, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            if (buttons[0, 0].Text == buttons[1, 0].Text && buttons[1, 0].Text == buttons[2, 0].Text)
+            {
+                if (buttons[0, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            if (buttons[0, 1].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 1].Text)
+            {
+                if (buttons[0, 1].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            if (buttons[0, 2].Text == buttons[1, 2].Text && buttons[1, 2].Text == buttons[2, 2].Text)
+            {
+                if (buttons[0, 2].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            if (buttons[0, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 2].Text)
+            {
+                if (buttons[0, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            if (buttons[2, 0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[0, 2].Text)
+            {
+                if (buttons[2, 0].Text != "")
+                {
+                    MessageBox.Show("Вы победили!");
+                    winButton = true;
+                }
+            }
+            checkDraw();
+            winButton = false;
+        }
     }
 }
